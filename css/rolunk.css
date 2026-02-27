@@ -59,4 +59,51 @@ p {
   top: 10px;
   right: 10px;
   width: 200px; 
+  min-width: 0;
+}
+
+
+
+
+
+/*responsivity elkezdése*/
+
+@media (max-width: 768px) {
+
+  body {
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+
+  h1 {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .header h1 {
+  font-size: clamp(18px, 5vw, 60px);
+  }
+
+  h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .flex-container {
+    flex-direction: column;   
+    gap: 20px;
+    margin-right: 0;
+  }
+
+  p {
+    font-size: 18px;          
+    margin-left: 0;
+    margin-top: 20px;
+    padding: 5px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+  
 }
