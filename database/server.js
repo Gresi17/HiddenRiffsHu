@@ -1,4 +1,5 @@
-import express from "express";
+const express = require("express");
+const db = require("./database.js");
 
 const app = express();
 
