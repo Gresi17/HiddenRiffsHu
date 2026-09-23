@@ -1,0 +1,2 @@
+CREATE DATABASE hiddenriffs;
+SHOW DATABASES;

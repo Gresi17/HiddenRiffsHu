@@ -2,11 +2,14 @@
   font-family: "Jaini Purva";
 }
 
+
 body {
-  background-color: rgb(49, 34, 56);
+  background-image: url(../vektorok/Rolunk_Vektor.png);
+  background-size: cover;
+  background-attachment: fixed;
+  /*height: 100vh;*/
   margin-left: 30px;
 }
-
 
 h1 {
   color: rgb(225, 173, 229);
@@ -24,24 +27,24 @@ h3 {
 }
 
 p {
-    font-size: 35px;
-    color: azure;
-    font-weight: bolder;
-    margin-left: 100px;
-    margin-top: 60px;
-    line-height: 1.4;
-    text-align: left;
-    padding: 10px;
-    text-align: justify;
-    text-shadow: 0px 4px 4px rgb(0, 0, 0);
-    z-index: 2;
-    position: relative;
+  font-size: 35px;
+  color: azure;
+  font-weight: bolder;
+  margin-left: 100px;
+  margin-top: 60px;
+  line-height: 1.4;
+  text-align: left;
+  padding: 10px;
+  text-align: justify;
+  text-shadow: 0px 4px 4px rgb(0, 0, 0);
+  z-index: 2;
+  position: relative;
 }
 
 .flex-container {
   display: flex;
-  gap: 135px;       
-  align-items: flex-start; 
+  gap: 135px;
+  align-items: flex-start;
   margin-right: 155px;
 }
 
@@ -50,16 +53,14 @@ p {
 }
 
 .oszlop p {
-    text-align: justify;      
-    text-justify: inter-word; 
+  text-align: justify;
+  text-justify: inter-word;
 }
 
 .logo {
   position: fixed;
   top: 10px;
   right: 10px;
-  width: 200px; 
-  min-width: 0;
 }
 
 
@@ -105,5 +106,8 @@ p {
   .logo {
     width: 70px;
   }
-  
+}
+
+a {
+  text-decoration: none;
 }
