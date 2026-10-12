@@ -11,6 +11,8 @@ import { Album } from "./models/Album.model";
 const app = express();
 app.use(express.json());
 
+
+
 app.listen(3306, async () => {
   console.log("Sikeres: http://localhost:3306");
 
