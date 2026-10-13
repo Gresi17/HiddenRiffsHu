@@ -26,4 +26,9 @@ export const Felvett_Zene = sequel.define("Felvett_Zene", {
     type: DataTypes.STRING,
     allowNull: false,
   },
-});
+},
+{
+  tableName: "Felvett_Zene",
+}
+
+);
