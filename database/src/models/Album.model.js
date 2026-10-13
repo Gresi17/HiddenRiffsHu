@@ -1,4 +1,4 @@
-import { sequel } from "../utils/database";
+import { sequel } from "../utils/database.js";
 import { DataTypes } from "sequelize";
 
 export const Album = sequel.define(
@@ -15,6 +15,7 @@ export const Album = sequel.define(
     },
     mufajId: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       unique: true,
     },
   },

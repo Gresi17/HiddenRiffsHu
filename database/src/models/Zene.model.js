@@ -10,6 +10,7 @@ export const Zene = sequel.define(
     },
     mufajId: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       unique: true,
     },
     bandaId: {

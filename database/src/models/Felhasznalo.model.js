@@ -1,8 +1,8 @@
-import { sequel } from "../utils/database";
+import { sequel } from "../utils/database.js";
 import { DataTypes } from "sequelize";
 
 export const User = sequel.define(
-  "Felhasználó",
+  "User",
   {
     username: {
       type: DataTypes.STRING,
