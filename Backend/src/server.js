@@ -31,7 +31,9 @@ app.get("/users", async (req, res) => {
     res.json(users);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Hiba történt a felhasználók lekérése során." });
+    res
+      .status(500)
+      .json({ error: "Hiba történt a felhasználók lekérése során." });
   }
 });
 
@@ -72,6 +74,14 @@ app.get("/zenek", async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ error: "Hiba történt az zenelek lekérése során." });
+  }
+});
+
+app.post("/hozzaadas", async (req, res) => {
+  try {
+  } catch (error) {
+    console.log(error);
+    res.status(500).json({ error: "Hiba történt a hozzáadás közben" });
   }
 });
 
