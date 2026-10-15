@@ -21,5 +21,6 @@ export const Album = sequel.define(
   },
   {
     tableName: "Album",
+    timeStamps: false,
   },
 );

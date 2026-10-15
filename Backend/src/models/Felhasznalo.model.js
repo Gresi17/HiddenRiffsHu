@@ -23,5 +23,6 @@ export const User = sequel.define(
   },
   {
     tableName: "Felhasználó",
+    timeStamps: false,
   },
 );

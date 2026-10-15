@@ -16,5 +16,6 @@ export const Bandak = sequel.define(
   },
   {
     tableName: "Bandák",
+    timeStamps: false,
   },
 );

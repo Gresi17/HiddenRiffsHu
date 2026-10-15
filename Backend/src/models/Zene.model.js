@@ -24,5 +24,6 @@ export const Zene = sequel.define(
   },
   {
     tableName: "Zene",
+    timeStamps: false,
   },
 );

@@ -29,6 +29,7 @@ export const Felvett_Zene = sequel.define("Felvett_Zene", {
 },
 {
   tableName: "Felvett_Zene",
+  timeStamps: false,
 }
 
 );

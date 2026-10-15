@@ -11,5 +11,6 @@ export const Mufaj = sequel.define(
   },
   {
     tableName: "Műfaj",
+    timeStamps: false,
   },
 );
