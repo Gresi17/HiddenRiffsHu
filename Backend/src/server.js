@@ -9,6 +9,8 @@ import { Zene } from "./models/Zene.model.js";
 import { Album } from "./models/Album.model.js";
 import { Felvett_Zene } from "./models/Felvett_Zenek.model.js";
 
+Felvett_Zene.belongsTo(Zene, { foreignKey: "zeneId" });
+Zene.hasMany(Felvett_Zene, { foreignKey: "zeneId" });
 Zene.belongsTo(Album, { foreignKey: "albumId" });
 Zene.belongsTo(Mufaj, { foreignKey: "mufajId" });
 Album.hasMany(Zene, { foreignKey: "albumId" });
@@ -21,12 +23,17 @@ Mufaj.hasMany(Album, { foreignKey: "mufajId" });
 Mufaj.hasMany(Zene, { foreignKey: "mufajId" });
 Mufaj.hasMany(Bandak, { foreignKey: "mufajId" });
 
-
 const app = express();
 app.use(express.json());
 
-app.listen(3000, () => {
-  console.log("Sikeres: http://localhost:3000");
+app.listen(3300, async () => {
+  console.log("Sikeres: http://localhost:3300");
+
+  try {
+    sequel.sync({alter: true})
+  } catch (error) {
+    console.log(error)
+  }
 });
 
 app.get("/users", async (req, res) => {
@@ -52,4 +59,22 @@ app.get("/albumok", async (req, res) => {
 app.get("/zenek", async (req, res) => {
   const data = await Zene.findAll();
   res.json(data);
+});
+
+//TODO: Zene hozzáadás
+app.post("/zene_felvetel", async (req, res) => {
+  const { cim, mufajId, bandaId, albumId } = req.body;
+
+  if (!cim || !mufajId || !bandaId || !albumId) {
+    return res.status(500).json({ error: "Hiányzó adatok!" });
+  }
+
+  await Zene.create({
+    cim,
+    mufajId,
+    bandaId,
+    albumId,
+  });
+
+  res.status(201).json({ msg: "Sikeres hozzáadás!" });
 });

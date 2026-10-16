@@ -3,7 +3,7 @@ import { Mufaj } from "../models/mufaj.model.js";
 import { Bandak } from "../models/bandak.model.js";
 import { Album } from "../models/Album.model.js";
 import { Zene } from "../models/Zene.model.js";
-import {sequel} from "../utils/database.js"; 
+import { sequel } from "../utils/database.js";
 
 export async function getById() {
   return await User.findByPk(id, {});
